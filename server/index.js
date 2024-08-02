@@ -51,8 +51,8 @@ app.get("/schedule/:id", async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(port, "0.0.0.0", function () {
     
 });
