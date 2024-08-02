@@ -9,6 +9,10 @@ app.use(express.json());
 
 //ROUTES//
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Schedule API");
+});
+
 //create a schedule
 
 app.post("/schedule", async(req,res) => {
@@ -47,10 +51,8 @@ app.get("/schedule/:id", async (req, res) => {
     }
 });
 
-//update a schedule
+const PORT = process.env.PORT || 5000;
 
-//delete a schedule
-
-app.listen(5000, () => {
-    console.log("server has started on port 5000");
+app.listen(PORT, () => {
+    
 });
